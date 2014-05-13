@@ -11,6 +11,6 @@ let rec printFib n  =
 
 printfn "Enter number:"
 
-let num = int(System.Console.ReadLine())
+let num = int <| System.Console.ReadLine()
            
-printFib(num)
+printFib num

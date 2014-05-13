@@ -1,4 +1,6 @@
-﻿let rec reverseList list =
+﻿// Функция обращения списка
+
+let rec reverseList list =
     match list with
     | [] -> list
     | h :: t -> List.append (reverseList list.Tail) [list.Head]

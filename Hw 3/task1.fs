@@ -1,4 +1,6 @@
-﻿let firstPosition (number: int) list =
+﻿// Задание: вывести позицию в списке, на которой сумма двух соседних элементов максимальна. Например, для [1, 5, 6, 2] функция должна вернуть значение 2
+
+let firstPosition (number: int) list =
     let rec assistant (list1: List<int>) =
         if list1.Length = 1 then list1
             elif list1.Head = number then [number]
@@ -14,8 +16,8 @@ let positionMaxSum list =
     let position = firstPosition max listSum
     position
 
-printfn "%A" (positionMaxSum [1; 5; 6; 2])   // 1
-printfn "%A" (positionMaxSum [0; 0; 0; 2])   // 2
-printfn "%A" (positionMaxSum [1; 0; 0; 0])   // 0
-printfn "%A" (positionMaxSum [1; 5; 6; 77])  // 2
-printfn "%A" (positionMaxSum [1; 5; 6; 2; 8; 99; 365; 101])  // 6
+printfn "%A" <| positionMaxSum [1; 5; 6; 2]    // 1
+printfn "%A" <| positionMaxSum [0; 0; 0; 2]    // 2
+printfn "%A" <| positionMaxSum [1; 0; 0; 0]    // 0
+printfn "%A" <| positionMaxSum [1; 5; 6; 77]   // 2
+printfn "%A" <| positionMaxSum [1; 5; 6; 2; 8; 99; 365; 101]    // 6

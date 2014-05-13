@@ -4,6 +4,6 @@
 
 printfn "Enter 2^k:"
 
-let n = int(System.Console.ReadLine())
+let n = int <| System.Console.ReadLine()
 
-printfn "%A" (degreesOfTwo n)
+printfn "%A" <| degreesOfTwo n

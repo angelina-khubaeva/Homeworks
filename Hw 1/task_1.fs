@@ -4,6 +4,6 @@
 
 printfn "Enter number:"
 
-let n =  int(System.Console.ReadLine())
+let n = int <| System.Console.ReadLine()
 
 printfn "n! = %A" (factorial n)
