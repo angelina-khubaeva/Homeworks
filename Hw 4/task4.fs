@@ -59,4 +59,7 @@ let rec differentiation = function
     | Quotient(expr1, expr2) -> Quotient (simplifySum (simplifyProduct (differentiation expr1) expr2 '*') (simplifyProduct expr1 (differentiation expr2) '*') '-', simplifyProduct expr2 expr2 '*')
      
 let myExpr = Sum(Product(Var('x'), Var('y')), Product(Constant (5), Var('z')))     // xy + 5z
-printfn "%A" <| differentiation myExpr                                             // x + y + 5 
+let myExpr1 = Sum(Product(Constant(2), Var('x')), Constant(1))
+
+printfn "result = %A" <| differentiation myExpr1                                             // x + y + 5 
+

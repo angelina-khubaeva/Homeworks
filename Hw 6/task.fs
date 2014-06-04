@@ -18,4 +18,4 @@ let compute =
         return a / b
     }
 
-printfn "%A" compute
+printfn "result = %A" compute
